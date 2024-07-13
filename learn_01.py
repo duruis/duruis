@@ -1,11 +1,12 @@
+
 # Immutable = you cannot change once you definite it 
-# str; int; float; bool; bytes; tuple 
+# str; int; float; bool; bytes; tuple
 
 
 # Muttable = you can change them
  # list []; set; dict
  
-x = [i for i in range (10)]
+'''x = [i for i in range (10)]
 y = [i for i in range (10) if i % 2 == 0]
 print(x + y)
 
@@ -25,8 +26,17 @@ def function ( a, b, c= True, d= False):
   print(a, b, c, d)
   pass
 function (*[1, 2], **{"c":  "cool", "d": "nice"})
+'''
+'''
+name = input ("What's your name? ")
+print("Hello " + name)'''
+""""
+bday = input("When is your birthday year? ") 
+age = 2024 - int(bday)
+print(age)
+"""
 
- 
+  
  
   
 
