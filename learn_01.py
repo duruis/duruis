@@ -116,7 +116,58 @@ for i in numbers:
 color = input("What is your favorite color: ?")
 print(f"I also love {color}")
 
+  """
 """
+print("What is your name? ")
+name = input()
+print ("It is nice to meet you, {}" .format (name)) 
+
+"""
+""" 
+while True:
+  print ("Who are you?")
+  name = input()
+  if name != "Edu":
+    continue
+  print("Hello Edu. What is your password? ")
+  password = input ()
+  if password == "Monkey":
+    break
+print("Access granted")
+"""
+"""
+for i in [ 1, 2, 3, 4, 5, 6, 7, 8, 9, ]:
+  if i == 11:
+    break
+else:
+  print("only executed no item in the list in equal to 3")
+"""
+"""
+name = ["Edu", "Dudu", "Ed", "Eduardo"]
+age = [23, 25, 29, 34]
+for n, a in zip(name, age):
+  print("{} is {} years old".format(n,a))
+"""
+"""
+print ("Hello world\nIt is been a freaking beautiful journey\nThanks God for another beautiful day")
+"""
+"""
+def add(x, y):
+ return x + y
+result = add(23, 77)
+print(result)
+
+"""
+ 
+ 
+    
+
+
+
+  
+  
+  
+   
    
   
   
