@@ -236,26 +236,59 @@ for i in range (20):
 """
 print ("meow\n" * 3, end="")  
   """
- """ 
+""" 
 while True:
   n = int(input("What is n? "))
   if n > 0:
      break
 for _ in range(n):
   print("meow")
-  """
+"""
+"""
+students = ["Edu", "Dudu", "Ed", ]
+for i in range(len(students)):
+  print(i + 1, students[i])
+  
+"""
+"""
+animals = [
+  {"ID": "PUSP", "YEAR": "TF", "SEX": "M"},
+  {"ID": "PUSP", "YEAR": "TT", "SEX": "F"},
+  {"ID": "PUSP", "YEAR": "TTT", "SEX": "M"},
+]  
+for individual in animals:
+ print(individual ["ID"], individual ["YEAR"], individual ["SEX"], sep=(", "))
+"""
+"""
+def main ():
+ print_row(4)
+  
+def print_row (width):
+  print("?" * width)
+  
+main()
+"""
+'''
+def main():
+  print_square(3)
+  
+def print_square(n):
+  for i in range(n):  
+   print("#" * n)
+
+main ()
+'''
+''
+while True:
+  try:
+   x = float(input("What is x? "))
+  except ValueError:
+   print("x is not an integer")
+  else:
+   break
+print(f"x is {x}")
 
   
-  
-  
-   
-   
-  
-  
-
-
-
-
 
   
 
