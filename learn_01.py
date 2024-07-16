@@ -158,11 +158,92 @@ result = add(23, 77)
 print(result)
 
   """
- 
- 
-    
+"""
+x = float(input("What is x? "))
+y = float(input("What is y? "))
+print(f"{x + y: ,}")
+"""
+"""
+x = float(input("What is x? "))
+y = float(input("What is y? "))
+print(round(x / y, 2))
+"""
+"""
+def hello(to="World"):
+   print("hello,", to)
+   
+hello()
+name = input("What is your name? ")
+hello (name)
+  """
+"""
+def main ():
+  x = float(input("What is x? "))
+  print("x squared is", square (x))
+  
+def square(n):
+  return pow (n, 2)
 
+main()
+  """
+""" 
+score = float(input("Score: "))
+if score >= 90:
+  print("Grade A")
 
+elif score >= 80:
+  print("Grade B")
+
+elif score >= 70:
+  print("Grade C")
+
+elif score >= 60:
+  print("Grade D")
+
+else:
+  print("You are fucked")
+"""
+"""
+def main ():
+  x = float(input("What is x? "))
+  if is_even(x):
+    print("Even")
+  else:
+    print("Odd")
+def is_even (n):
+    return n % 2 == 0
+     
+main ()
+"""
+"""
+name = input("What is your name? ")
+match name:
+  case "Edu" | "Ed" | "Dudu":
+    print ("Pira")
+  case "Mel" | "Me" | "Meme":
+    print("Recife")
+  """
+"""  
+i = 5
+while i != 0:
+  print("meow")
+  i = i - 1
+"""
+"""
+for i in range (20):
+  print ("meow")
+  """
+"""
+print ("meow\n" * 3, end="")  
+  """
+ """ 
+while True:
+  n = int(input("What is n? "))
+  if n > 0:
+     break
+for _ in range(n):
+  print("meow")
+  """
 
   
   
