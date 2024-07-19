@@ -57,7 +57,7 @@ if temperature > 20 and temperature <= 35:
 
 print("Done")
 """
-""""
+"""
 temperature = float(input("Temperature outside?: "))
 if temperature > 35:
   print("Stay hydrated, it is hot out")
@@ -111,12 +111,12 @@ for item in numbers:
 numbers = range (0, 60, 2)
 for i in numbers:
   print(i)
-  """
-""""  
+"""
+"""  
 color = input("What is your favorite color: ?")
 print(f"I also love {color}")
 
-  """
+"""
 """
 print("What is your name? ")
 name = input()
@@ -157,7 +157,7 @@ def add(x, y):
 result = add(23, 77)
 print(result)
 
-  """
+"""
 """
 x = float(input("What is x? "))
 y = float(input("What is y? "))
@@ -175,7 +175,7 @@ def hello(to="World"):
 hello()
 name = input("What is your name? ")
 hello (name)
-  """
+"""
 """
 def main ():
   x = float(input("What is x? "))
@@ -185,7 +185,7 @@ def square(n):
   return pow (n, 2)
 
 main()
-  """
+"""
 """ 
 score = float(input("Score: "))
 if score >= 90:
@@ -268,7 +268,7 @@ def print_row (width):
   
 main()
 """
-'''
+"""
 def main():
   print_square(3)
   
@@ -277,8 +277,8 @@ def print_square(n):
    print("#" * n)
 
 main ()
-'''
-''
+"""
+"""
 while True:
   try:
    x = float(input("What is x? "))
@@ -288,26 +288,214 @@ while True:
    break
 print(f"x is {x}")
 
-  
+"""
+"""
+import random
+numbers = random.choice (list(range(61)))
+print(numbers)  
 
-  
+"""
+"""
+import random
+numbers = random.randint(0, 61)
+print(numbers)
 
-  
-   
+"""
+"""
+import random
 
+cards = ["jack", "queen", "king"]
+random.shuffle (cards)
+for card in cards:
+  print(card)
+"""
+"""
+import statistics
+print(statistics.mean ([10, 20]))
+"""
+"""
+import sys
+if len(sys.argv) < 2:
+   print ("Too few arguments")
+elif len(sys.argv) > 2:
+  print ("Too many arguments")
+else:
+ print("What's up? My name is", sys.argv[1])
+"""
+"""
+def main():
+  hello("world")
+  goodbye("world")
   
+def hello(name):
+  print(f"hello, {name}")
   
+def goodbye(name):
+  print(f"goodbye, {name}")
+
+if __name__ == "__main__":
+ main ()
+
+# continue ...create a new file
+
+import sys
+from learn_01 import hello
+if len(sys.argv) == 2:
+   hello (sys.argv [1])
+
+"""
+"""
+def main ():
+  x = float(input("What is x? "))
+  print("x square is ", square(x))
+  
+def square(n):
+  return n * n
+
+if __name__ == "__main__":
+ main ()
  
+#in a new file
+
+from learn_01 import square
+
+def test_positive():
+  assert square(2) == 4
+  assert square(3) == 9
+
+def test_negative():
+  assert square(-2) == 4
+  assert square(-3) == 9
+
+def test_zero():
+  assert square(0) == 0
+"""
+"""
+name = input("What is your name? ")
+with open("names.txt", "a") as file:
+ file.write(f"{name}\n")
+
+with open("names.txt", "r") as file:
+  for line in file:
+    print("hello,", line.rstrip())
+
+"""
+"""
+names = []
+with open("names.txt") as file:
+  for line in file:
+    names.append(line.rstrip())
+for name in sorted(names):
+ print(f"hello, {name}") 
+
+"""
+"""
+with open ("names.txt") as file:
+   for line in file:
+     name, location = line.rstrip().split(",")
+     print(f"{name} is in {location}")
+"""
+"""
+#to read and sort through the csv file
+ import csv
+ names = []
+ with open ("names.txt") as file:
+   reader = csv.DictReader(file)
+   for name , location in reader:
+     names.append({"name":name, "location":location})
+
+ print(f"{name} is in {location}")
+"""
+"""
+import csv
+name = input("What is your name? ")
+home = input("Where is your home? ")
+
+with open("students.csv", "a") as file:
+  writer = csv.DictWriter(file, fieldnames=["name", "home"])
+  writer.writerow({"name": name, "home": home})
   
+"""
+"""
 
+import sys
+from PIL import Image
+novo = []
 
+for arg in sys.argv[1:]:
+  image = Image.open(arg)
+  novo.append(image)
+  
+novo[0].save(
+  "new_file.gif", save_all=True, append_novo=[novo[1]], duration=100, loop=0) 
 
+"""
+"""
+email = input("What is your email?").strip()
 
+if "a" in email and  "." in email: 
+  print("Valid")
+else:
+  print("Invalid")   
+  
+"""
+"""
+import re
+name = input("What is your name? ").strip()
+if matches := re.search(r"^(.+), *(.+)$", name):
+  name = matches.group(1) + " " + matches.group(2)
+  print(f"hello, {name}")
 
+"""
 
 
   
+"""
+name = input("Name: ?")
+house = input("House: ?")
+print(f"{name} from {house}")
+"""
+"""
+def main ():
+ student = get_student()
+ print(f"{student[0]} from {student[1]}")
  
-  
+def get_student():
+  name = input("Name: ")
+  house = input("House: ")
+  return (name, house)
+
+if __name__ == "__main__":
+ main() 
+ 
+"""
+'''
+class Student:
+    def __init__(self, name, house):
+        if not name:
+            raise ValueError("Missing name")
+        if house not in ["Pira", "Recife", "Olimpia"]:
+            raise ValueError("Invalid house")
+        self.name = name
+        self.house = house
+
+    def __str__(self):
+        return f"{self.name} from {self.house}"
+
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return Student(name, house)
+
+
+def main():
+    student = get_student()
+    print(student)
+
+
+if __name__ == "__main__":
+    main()
+'''
 
 
