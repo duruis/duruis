@@ -293,7 +293,6 @@ print(f"x is {x}")
 import random
 numbers = random.choice (list(range(61)))
 print(numbers)  
-
 """
 """
 import random
@@ -498,4 +497,216 @@ if __name__ == "__main__":
     main()
 '''
 
+"""
+import random
+class Hat:
+ houses = [ "Pira", "Olimpia", "Recife"]
+ @classmethod
+ def sort(cls, name):
+  print(name, "is in", random.choice(cls.houses))
+    
+Hat.sort("Harry")
 
+"""
+
+"""
+class Wizard:
+    def __init__(self, name):
+        if not name:
+            raise ValueError("Missing name")
+        self.name = name
+
+class Student(Wizard):
+    def __init__(self, name, house):
+        super().__init__(name)
+        self.house = house
+
+class Professor(Wizard):
+    def __init__(self, name, subject):
+        super().__init__(name)
+        self.subject = subject
+
+wizard = Wizard("Thinker")
+student = Student("Ed", "Pira")
+professor = Professor("Kahiko", "monkey climbing coconut tree")
+
+print(f"Wizard: {wizard.name}")
+print(f"Student: {student.name}, House: {student.house}")
+print(f"Professor: {professor.name}, Subject: {professor.subject}")
+
+"""
+"""
+class Vault:
+  def __init__(self, gal=0, sick=0, nuts=0):
+     self.gal = gal
+     self.sick = sick
+     self.nuts = nuts
+  
+  def __str__(self):
+    return f"{self.gal} gal, {self.sick} sick, {self.nuts} nuts"
+  
+  def __add__(self, other):
+    gal = self.gal + other.gal
+    sick = self.sick + other.sick
+    nuts = self.nuts + other.sick
+    return Vault(gal, sick, nuts)
+  
+potter = Vault(100, 20, 10)
+print(potter)
+
+ed = Vault(10, 10, 10)
+print(ed)
+
+total = potter + ed
+print(total)
+
+"""
+"""
+students = [
+    {"name": "Ed", "house": "Pira"},
+    {"name": "Edu", "house": "Pirasu"},
+    {"name": "Du", "house": "Pirasunun"},
+    {"name": "Dudu", "house": "Pirasununga"}
+]
+
+houses = set ()
+for student in students:
+   houses.add(student["house"])
+
+for house in sorted(houses):
+    print(house)
+    
+"""
+"""
+balance = 0
+
+def main (): 
+ deposit (100)
+ withdrawn (55)
+ print("Balance:", balance)
+  
+def deposit(n):
+  global balance
+  balance += n
+
+def withdrawn(n):
+  global balance
+  balance -= n
+
+if __name__ == "__main__":
+ main()    
+"""
+"""
+class Account:
+  def __init__(self):
+    self._balance = 0
+    
+  @property
+  def balance(self):
+    return self._balance
+  def deposit(self, n):
+    self._balance += n
+    
+  def withdrawn(self, n):
+    self._balance -= n
+  
+def main():
+  account = Account()
+  print("Balance:", account.balance)
+  account.deposit (100)
+  account.withdrawn (55)
+  print("Balance:", account.balance)
+  
+  
+if __name__ == "__main__":
+ main()
+ 
+"""
+"""
+def total (A, B, C):
+  return (A * 10 + B) * 9 + C
+
+print(total(2, 5, 10), "C")
+
+"""
+"""
+def total (A, B, C):
+  return (A * 10 + B) * 9 + C
+
+variables = [100, 30, 50]
+print(total(*variables), "C")
+
+"""
+"""
+def f(*args, **kwargs):
+  print("Positional: ", args)
+
+f (100, 50, 20, 30)
+"""
+"""
+def f(*args, **kwargs):
+  print("Named: ", kwargs)
+
+f (ed=100, edu=50, dudu=20, d=30)
+"""
+"""
+def main ():
+  name("My", "name", "is", "Ed")
+    
+def name (*words):
+  uppercased = []
+  for word in words:
+    uppercased.append(word.upper())
+  print(*uppercased)
+
+if __name__ == "__main__":
+  main()
+
+"""
+"""
+def main ():
+  name("my", "name", "is", "ed")
+    
+def name (*words):
+  uppercased = map(str.upper, words)
+  print(*uppercased)
+
+if __name__ == "__main__":
+  main()
+"""
+"""
+def main ():
+  name("my", "name", "is", "ed")
+    
+def name (*words):
+  uppercased = [word.upper() for word in words]
+  print(*uppercased)
+
+if __name__ == "__main__":
+  main()
+
+"""
+"""
+students = [
+    {"name": "Ed", "house": "Pira"},
+    {"name": "Edu", "house": "Pira"},
+    {"name": "Du", "house": "Pirasunun"},
+    {"name": "Dudu", "house": "Pira"}
+]
+Pira = filter(lambda s: s["house"]== "Pira", students)
+ 
+for Pira in sorted(Pira, key=lambda s: s["name"]):
+  print(Pira ["name"]) 
+"""
+"""
+names = [ "Ed", "Edu", "Dudu"]
+
+Pira = { name: "Pira " for name in names}
+print(Pira)
+
+"""
+
+students = ["Ed", "Edu", "Dudu"]
+
+for i, student in enumerate(students):
+  print(i + 1, students[i])
