@@ -130,8 +130,33 @@ while count < 7:
     break
   print("you are an ass")
 """
-"""
+
 #random random random
+"""
+import random
+numbers = [1,2,3,4,5,6]
+chance=random.choice(numbers)
+print(chance)
+"""
+"""
+import random
+for i in range(1):
+ print(random.randint(0,7))
+"""
+
+"""
+import random
+list = ('Ed', 'Edu', 'Ed', 'Edu')
+pick=random.choice(list)
+print(pick)
+"""
+"""
+import random
+for i in range(6):
+ print(random.randint(0,61))
+"""
+
+"""
 import random
 def runGame():
   "the game code"
@@ -148,8 +173,20 @@ def runGame():
 """
 #Functions Functions Functions
 """
-
-
+def great_name(First_name, Last_name):
+  print(f"Hi {First_name} {Last_name}")
+  print("Welcome to the show")
+  
+print("What's up everyone")
+great_name("Ed", "Castro")
+print("Hope you all have a great day")
+"""
+"""
+def square(number):
+  return number * number
+print(square(4))
+"""
+"""
 def main ():
  student = get_student()
  print(f"{student[0]} from {student[1]}")
@@ -258,6 +295,47 @@ single_sample= sample(names,3)
 print(single_sample)
 """
 #Class Class Class
+"""
+import random
+class Dice:
+ def roll(self):
+   first = random.randint(1,6)
+   second = random.randint(1,6)
+   return first, second
+   
+
+Dice_01 = Dice()
+print (Dice_01.roll())
+"""  
+
+"""
+class Point:
+  def __init__(self, x,y ):
+    self.x = x
+    self.y = y
+  
+  def name():
+    print("name")
+  def draw():
+    print("draw")
+    
+point_01=Point(10,20)
+print(point_01.x)
+print(point_01.y)
+"""
+"""
+class Person:
+   def __init__(self, name):
+    self.name = name
+  
+   def talk(self):
+    print(f"I am {self.name} how is your day going?")
+    
+Person_01 = Person ("Ed")
+Person_01.talk()
+Person_02 = Person ("Eduardo")
+Person_02.talk()
+"""
 """
 class Person:
   def __init__(self,name):
