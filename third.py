@@ -3,6 +3,7 @@ b_year = int(input("What is your year of birth? "))
 age = 2024 - b_year
 print(age)
 """
+
 """
 first = ("Edu")
 last = ("monkey")
@@ -95,13 +96,13 @@ digital={"1": "one", "2": "two", "3": "three"}
 for i in phone:
  print(digital.get(i), end=" ")
 """
-#mkdir rmdir touch
+# mkdir rmdir touch
 """
 from pathlib import Path
 path = Path()
 for file in path.glob("*.py"):
  print(file)
-""" 
+"""
 """
 from pathlib import Path
 path = Path()
@@ -132,37 +133,6 @@ def process_workbook (filename):
 
       
     wb.save(filename)
-    
-"""
-            
-
-      
+  """
 
 
-
-
-
- 
- 
-  
-  
-  
-
-
-  
-
-
-
-
-
-
-        
-    
-    
-    
-
-  
-  
-  
-  
-   

@@ -1,4 +1,4 @@
-#If statements If statements If statements
+# If statements If statements If statements
 """
 score = float(input("Score: "))
 if score >= 90:
@@ -36,7 +36,7 @@ else:
   print("Weight in Kilos: " + str(converted))
 """
 
-#Lists Lists Lists
+# Lists Lists Lists
 """
 list_1 = [1,2,3,4,5]
 for i in list_1:
@@ -58,7 +58,7 @@ list_2 = [20,30,40,50]
 list_1.extend(list_2)
 print(list_1)
 """
-#List Comprehensions - concise way to create a list.
+# List Comprehensions - concise way to create a list.
 """
 square = []
 for x in range (10):
@@ -77,7 +77,7 @@ print(combs)
 seasons = ['Spring', 'Summer', 'Autumn', 'Winter']
 print(list(enumerate(seasons, start=1)))
 """
-#Loops Loops Loops
+# Loops Loops Loops
 
 """
 name = ["Edu", "Dudu", "Ed", "Eduardo"]
@@ -131,7 +131,7 @@ while count < 7:
   print("you are an ass")
 """
 
-#random random random
+# random random random
 """
 import random
 numbers = [1,2,3,4,5,6]
@@ -171,7 +171,7 @@ def runGame():
    elif choice == "2":
      break 
 """
-#Functions Functions Functions
+# Functions Functions Functions
 """
 def great_name(First_name, Last_name):
   print(f"Hi {First_name} {Last_name}")
@@ -199,7 +199,7 @@ def get_student():
 if __name__ == "__main__":
  main() 
 """
- 
+
 """
 def main ():
   x = float(input("What is x? "))
@@ -240,7 +240,7 @@ multiply(4,8)
 def square (x):
   return x*x
 print(square(9))
-"""  
+"""
 """
 import random
 magicnumber = random.randint(1,10)
@@ -267,7 +267,7 @@ while True:
 import random
 numbers = random.choice (list(range(1, 61)))
 print(numbers) 
-""" 
+"""
 
 """
 
@@ -294,7 +294,7 @@ names =['Ed','Edu', 'Dudu', 'Eduardo']
 single_sample= sample(names,3) 
 print(single_sample)
 """
-#Class Class Class
+# Class Class Class
 """
 import random
 class Dice:
@@ -306,7 +306,7 @@ class Dice:
 
 Dice_01 = Dice()
 print (Dice_01.roll())
-"""  
+"""
 
 """
 class Point:
@@ -359,13 +359,4 @@ class human:
 object=human()
 object.SayHello()
 object.SayHello(" ")
-"""   
-
-
-
-
-
-
-
-
-
+"""
