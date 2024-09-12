@@ -1,11 +1,535 @@
-
-# Immutable = you cannot change once you definite it 
+# Immutable = you cannot change once you definite it
 # str; int; float; bool; bytes; tuple
 
-
 # Muttable = you can change them
- # list []; set; dict
+# list []; set; dict
+
+# If statements If statements If statements
+"""
+score = float(input("Score: "))
+if score >= 90:
+  print("Grade A")
+
+elif score >= 80:
+  print("Grade B")
+
+elif score >= 70:
+  print("Grade C")
+
+elif score >= 60:
+  print("Grade D")
+
+else:
+  print("You are fucked")
+"""
+"""
+temperature = float(input("Temperature outside?: "))
+if temperature > 35:
+  print("Stay hydrated, it is hot out")
+elif  temperature <= 25 and temperature >=18:
+  print("It is nice out, get out of the house")
+else:
+  print("temperatures are dropping, bring a coat just in case")
+"""
+"""  
+weight = float(input("Weight: "))
+variable = input("(k)g or Pounds: ")
+if variable.upper == "K":
+  converted = weight / 0.45
+  print("Weight in Pounds: " + str(converted))
+else:
+  converted = weight * 0.45
+  print("Weight in Kilos: " + str(converted))
+"""
+
+# Lists Lists Lists
+"""
+list_1 = [1,2,3,4,5]
+for i in list_1:
+  print(i, end=" ")
+   
+list_1 = [1,2,3,4,5]
+list_1.append(6)
+list_1.remove (5)
+list_1.insert(0,0)
+list_1.pop(4)
+list_1.reverse()
+print(list_1)
+List_1.clear
+List_1.index
+List_1.count
+List_1.reverse
+List_1.copy
+list_2 = [20,30,40,50]
+list_1.extend(list_2)
+print(list_1)
+"""
+# List Comprehensions - concise way to create a list.
+"""
+square = []
+for x in range (10):
+  square.append(x**2)
+print(square)
+"""
+"""
+combs = []
+for x in [1,2,3]:
+ for y in [2,4,5,6]:
+   if x != y:
+     combs.append((x,y))
+print(combs)
+"""
+"""
+seasons = ['Spring', 'Summer', 'Autumn', 'Winter']
+print(list(enumerate(seasons, start=1)))
+"""
+# Loops Loops Loops
+
+"""
+name = ["Edu", "Dudu", "Ed", "Eduardo"]
+age = [23, 25, 29, 34]
+for n, a in zip(name, age):
+  print("{} is {} years old".format(n,a))
+"""
+"""
+while True:
+  print ("Who are you?")
+  name = input()
+  if name != "Edu":
+    continue
+  print("Hello Edu. What is your password? ")
+  password = input ()
+  if password == "Monkey":
+    break
+print("Access granted")
+"""
+"""
+while True:
+  try:
+   x = float(input("What is x? "))
+  except ValueError:
+   print("x is not an integer")
+  else:
+   break
+print(f"x is {x}")
+
+"""
+"""
+while True:
+  word = input("What is the magic word: ?")
+  if word == "ed":
+    print("You win") 
+  else:
+    print('Try again:')
+"""
+"""
+i = 1
+while i <= 5:
+  print(i, end=" ")
+  i = i + 1
+"""
+"""
+count = 0
+while count < 7:
+  count += 1
+  if count == 5:
+    break
+  print("you are an ass")
+"""
+
+# random random random
+"""
+import random
+numbers = [1,2,3,4,5,6]
+chance=random.choice(numbers)
+print(chance)
+"""
+"""
+import random
+for i in range(1):
+ print(random.randint(0,7))
+"""
+
+"""
+import random
+list = ('Ed', 'Edu', 'Ed', 'Edu')
+pick=random.choice(list)
+print(pick)
+"""
+"""
+import random
+for i in range(6):
+ print(random.randint(0,61))
+"""
+
+"""
+import random
+def runGame():
+  "the game code"
+  while True:
+   print("Game menu")
+   print("1) Start a new game")
+   print("2) Quit")
+   
+   choice = input("Enter your choice")
+   if choice == "1":
+     runGame()
+   elif choice == "2":
+     break 
+"""
+# Functions Functions Functions
+"""
+def great_name(First_name, Last_name):
+  print(f"Hi {First_name} {Last_name}")
+  print("Welcome to the show")
+  
+print("What's up everyone")
+great_name("Ed", "Castro")
+print("Hope you all have a great day")
+"""
+"""
+def square(number):
+  return number * number
+print(square(4))
+"""
+"""
+def main ():
+ student = get_student()
+ print(f"{student[0]} from {student[1]}")
  
+def get_student():
+  name = input("Name: ")
+  house = input("House: ")
+  return (name, house)
+
+if __name__ == "__main__":
+ main() 
+"""
+
+"""
+def main ():
+  x = float(input("What is x? "))
+  print("x squared is", square (x))
+  
+def square(n):
+  return pow (n, 3)
+
+main()
+"""
+
+"""
+def math (x,y=10):
+  return x ** y
+result = math(3)
+print(result)
+"""
+
+"""
+def function (*args, **kwargs ): # args and kwargs will run as many args u want and different types
+ print(args, kwargs)
+ pass
+function (10, 34, 45, 90, c = True, d = 10)
+"""
+"""
+def function (x, y, z = 10):
+ print(x + y * z)
+ pass
+function (4, 6, )
+"""
+"""
+def multiply(x, y):
+  print(f"You called the multiply of x,y with the values of x = {x} and y= {y}")
+  print(f"the multiply of x*y = {x*y}")
+multiply(4,8)
+"""
+"""
+def square (x):
+  return x*x
+print(square(9))
+"""
+"""
+import random
+magicnumber = random.randint(1,10)
+while True:
+ word = input("What is the magic number? ")
+ if word == "quit":
+   break
+
+ try:
+   playnumber = int(word)
+ except ValueError:
+   print("Try a different number without decimals")
+   continue
+    
+ if playnumber == magicnumber:
+  print('You got it right')
+ elif playnumber < magicnumber:
+  print("playnumber is lower")
+ elif playnumber > magicnumber:
+  print("Playnumber is higher")
+  print("This is not the magic number, try again")
+"""
+"""
+import random
+numbers = random.choice (list(range(1, 61)))
+print(numbers) 
+"""
+
+"""
+
+import random
+numbers = random.randint(0, 61)
+print(numbers)
+"""
+"""
+import random
+
+cards = ["jack", "queen", "king"]
+random.shuffle (cards)
+for card in cards:
+  print(card)
+"""
+"""
+from random import shuffle
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+shuffle (numbers)
+print (numbers)
+
+from random import sample
+names =['Ed','Edu', 'Dudu', 'Eduardo']
+single_sample= sample(names,3) 
+print(single_sample)
+"""
+# Class Class Class
+"""
+import random
+class Dice:
+ def roll(self):
+   first = random.randint(1,6)
+   second = random.randint(1,6)
+   return first, second
+   
+
+Dice_01 = Dice()
+print (Dice_01.roll())
+"""
+
+"""
+class Point:
+  def __init__(self, x,y ):
+    self.x = x
+    self.y = y
+  
+  def name():
+    print("name")
+  def draw():
+    print("draw")
+    
+point_01=Point(10,20)
+print(point_01.x)
+print(point_01.y)
+"""
+"""
+class Person:
+   def __init__(self, name):
+    self.name = name
+  
+   def talk(self):
+    print(f"I am {self.name} how is your day going?")
+    
+Person_01 = Person ("Ed")
+Person_01.talk()
+Person_02 = Person ("Eduardo")
+Person_02.talk()
+"""
+"""
+class Person:
+  def __init__(self,name):
+    self.name = name
+  
+  def whoami(self):
+    return "You are " + self.name
+
+p1 = Person("Edu")
+print(p1.whoami())
+print(p1.name)
+"""
+"""
+class human:
+  def SayHello(self, name=None):
+    if name != None:
+      print("What's up", (name))
+    else:
+      print("Do I know you?")
+
+object=human()
+object.SayHello()
+object.SayHello(" ")
+"""
+# Dictionary Dictionary Dictionary
+"""
+tel= {"ed": 3475, "edu": 3745, "dudu": 2049, "eduar": 2847}
+tel["jo"] = 2103
+del tel ["ed"]
+print(tel)
+"""
+# looping
+"""
+knights = {"galand": "the pure", "robin": "the brave"}
+for k, w, in knights.items():
+  print(k,w)
+"""
+"""
+questions = ["name", "quest", "favorite color"]
+answer = ["lancelot", "the holy grail", "blue"]
+for q,a in zip(questions, answer):
+  print("What is your: {0} It is {1}".format(q,a))
+"""
+# using set to eliminate duplicates
+"""
+basket = ["apple", "orange", "apple", "papaia", "carrots"]
+for f in sorted(set(basket)):
+  print(f) 
+"""
+
+"""
+b_year = int(input("What is your year of birth? "))
+age = 2024 - b_year
+print(age)
+"""
+
+"""
+first = ("Edu")
+last = ("monkey")
+print(f"{first} is the coolest dude and his last name is {last}")
+"""
+"""
+course = ("Python for beginners")
+print(f"{course.replace("Python", "sex")}")
+"""
+"""
+price_house = float(input("What is the price of the house? "))
+good_bad_credit = input("Do you have good or bad credit? ").lower()
+if good_bad_credit == "good":
+  print(f"total_downpayment", {price_house * 0.1})
+elif good_bad_credit == "bad":
+ print("total_downpayment",   {price_house * 0.2})
+print("Thanks for your business")
+"""
+"""
+price = 100000
+good_credit = False
+if good_credit:
+  down_payment = price * 0.1
+else:
+  down_payment = price * 0.2
+  print(f"Down payment: " ${down_payment})
+print("Thanks for your business")
+"""
+"""
+secret_number = 9
+guess_count = 0
+guess_limit = 3
+while guess_count < guess_limit:
+  guess = int(input("Guess: "))
+  guess_count += 1
+  if guess == secret_number:
+   print("You won")
+   break
+else:
+  print("Sorry, you failed")
+"""
+"""
+prices = [10,20,30,40]
+for i in prices:
+ print(f"You own me {sum(prices)}")
+ break
+"""
+"""
+list = [5,2,5,2,2]
+for number in list:
+  print("x" * number)
+#or
+list = [5,2,5,2,2]
+for number in list:
+  output= ""
+  for first in range(number):
+     output += "x"
+  print(output)
+"""
+"""
+matrix = [
+[1, 2 , 3],
+[4, 5, 6],
+[7, 8, 9]
+]
+matrix [1] [0:3] = [10, 20, 30]
+print(matrix) 
+"""
+"""
+numbers = (1,2,4,3,5,6,7,1,2,3,7,8,9,5,3,2,1,4,5,6)
+no_duplicates = list(set(numbers))
+print(no_duplicates)
+"""
+"""
+numbers = (0,1,3,4,5)
+x,t,r,e,t = numbers
+print((r*t)/e)
+"""
+"""
+contact = {"name": "Edu",
+  "age": "30",
+  "phone": "10204",
+  "city": "Nashive",
+    }
+print(contact ["age"])
+"""
+"""
+phone = input("What is your fucking phone number bitch? ")
+digital={"1": "one", "2": "two", "3": "three"}
+for i in phone:
+ print(digital.get(i), end=" ")
+"""
+# mkdir rmdir touch
+"""
+from pathlib import Path
+path = Path()
+for file in path.glob("*.py"):
+ print(file)
+"""
+"""
+from pathlib import Path
+path = Path()
+print(path.touch())
+"""
+"""
+import openpyxl as xl
+from openpyxl.chart import BarChart, Reference 
+
+def process_workbook (filename):
+    wb = xl.load_workbook(filename)
+    sheet = wb["Sheet1"]
+    for row in range(2, sheet.max_row -1):
+      cell=sheet.cell(row,3)
+      corrected_price = cell.value * 0.9
+      corrected_price_cell = sheet.cell(row, 4)
+      corrected_price_cell.value=corrected_price
+
+    values = Reference (sheet,
+    min_value=2,
+    max_value=sheet.max_row -1,
+    min_col=4,
+    max_col=4)
+            
+    chart = BarChart()
+    chart.add_data(values)
+    sheet.add_chart(chart,"e2")
+
+      
+    wb.save(filename)
+  """
+
+#################################################
 '''x = [i for i in range (10)]
 y = [i for i in range (10) if i % 2 == 0]
 print(x + y)
@@ -449,7 +973,6 @@ if matches := re.search(r"^(.+), *(.+)$", name):
 """
 
 
-  
 """
 name = input("Name: ?")
 house = input("House: ?")
@@ -497,5 +1020,3 @@ def main():
 if __name__ == "__main__":
     main()
 '''
-
-
